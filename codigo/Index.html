@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <title>Gas Low Cost</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+</head>
+
+<body class="main-layout">
+   <div class="loader_bg">
+      <span class="loader"></span>
+   </div>
+   <div>
+      <header class="header-area">
+         <div class="container">
+            <div class="row d_flex">
+               <div class=" col-md-4 col-sm-4">
+                  <div class="logo">
+                     <a href="index.html">Gas Low Cost&nbsp;</a><img style="width: 50px; margin-bottom: 20px"
+                        src="images/bomba-de-gasolina.png" alt="">
+                  </div>
+               </div>
+               <div class="col-md-8 col-sm-8">
+                  <div class="navbar-area">
+                     <nav class="site-navbar">
+                        <ul>
+                           <li><a class="active" href="Index.html">Home</a></li>
+                           <li><a href="Favoritos.html">Favoritos</a></li>
+                           <li><a href="Sobre.html">Sobre</a></li>
+                           <li><a href="Contato.html">Contate-nos</a></li>
+                        </ul>
+                        <button class="nav-toggler">
+                           <span></span>
+                        </button>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+   </div>
+   <div class="appointment">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="titlepage text_align_center">
+                  <h2>Seu posto ideal bem perto de você </h2>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-12">
+            <form id="formPesquisa" class="main_form">
+               <div class="row" style="display: flex;">
+                  <div class="col-md-6">
+                     <input id="imputEndereco" class="form_control" placeholder="Pesquisar bairro, rua..." type="type"
+                        name="pesquisa">
+                  </div>
+                  <div class="col-md-4">
+                     <select required="required" id="selectTipoCombustivel" class="form_control" placeholder="Pesquisar bairro, rua..."
+                        type="text" name="tipoCombustivel">
+                        <option value="">Selecione o tipo de combustível</option>
+                        <option value="1">Diesel</option>
+                        <option value="2">Etanol</option>
+                        <option value="3">Gasolina</option>
+                        <option value="4">Gnv</option>
+                     </select>
+                  </div>
+                  <div class="col-md-2">
+                     <button type="button" class="send_btn"
+                        onclick="buscarPostos($('#selectTipoCombustivel').val())">Buscar</button>
+                  </div>
+               </div>
+               <div class="row" style="display: flex;">
+                  <ul class="listaPostos"></ul>
+               </div>
+         </div>
+         </form>
+      </div>
+   </div>
+   </div>
+   <footer>
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="follow text_align_center">
+                     <h3>Siga-nos</h3>
+                     <ul class="social_icon ">
+                        <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <p>© 2023 All Rights Reserved.</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <script src="js/jquery.min.js"></script>
+   <script src="js/custom.js"></script>
+</body>
+</html>
