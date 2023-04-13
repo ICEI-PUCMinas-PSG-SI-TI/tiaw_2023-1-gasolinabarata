@@ -1,8 +1,1 @@
-| Usuário      | Requisito | Motivação     |
-| :----:        |    :----:   |          :----: |
-| Como um cliente, eu quero      | acessar uma página<br>com informações gerais do produto       | para poder decidir se vou contratar o serviço.   |
-| Como um usuário, eu quero   | ter acesso privado ao sistema        | para sentir confiança na privacidade<br>de meus dados e pedidos.      |
-
-
-
-> Written with [StackEdit](https://stackedit.io/).
+![image](https://user-images.githubusercontent.com/128705807/231818763-558b0cb3-a10f-4964-a4b7-912c63e9edd1.png)
