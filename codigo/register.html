@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <link rel="icon" href="img/bomba-de-gasolina.png" type="image/x-icon">
+    <title>register</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <section class="form-register">
+        <h4>Faça registro para continuar</h4>
+        <input class="controls" type="text" name="Nome" id="nome" placeholder="Insira seu nome">
+        <input class="controls" type="email" name="E-mail" id="e-mail" placeholder="Insira seu e-mail">
+        <div>
+            <input class="controls" id="password" type="password" name="Senha" placeholder="Insira sua senha">
+            <i class="bi bi-eye" id="btn-senha" onclick="mostraSenha()"></i>
+        </div>
+        <input class="controls" id="password" type="password" name="Senha" placeholder="Confirmar senha">
+        <p><a href="#">Termos e condições</a></p>
+        <input class="botons" type="submit" value="Registra-se">
+        <p><a href="#">Já tem uma conta?</a></p>
+    </section>
+
+    <script src="register.js"></script>
+</body>
+
+</html>
