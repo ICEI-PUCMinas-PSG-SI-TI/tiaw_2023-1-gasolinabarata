@@ -16,7 +16,7 @@ O aplicativo está sendo desenvolvido com o intuito de buscar e filtrar postos d
 * João Caram Santos de Oliveira
 
 ## Quadro de tarefas
-Coloque aqui o link para acesso do Kanban do projeto, seja ele no GitHub ou em outra plataforma.
+https://trello.com/b/kdQTeHXU/tiawgaslowcost
 
 ## Instruções para uso
 Coloque aqui as instruções para acessar a página inicial do projeto (caminho completo do arquivo).
