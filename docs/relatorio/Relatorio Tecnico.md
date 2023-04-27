@@ -120,6 +120,7 @@ https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/blob/comen
 
 ## Mapa de navegação
 
+![image](https://user-images.githubusercontent.com/128705807/234989523-d29d5509-d7ec-41aa-9819-34993c8b20ed.png)
 
 
 # Conclusões
