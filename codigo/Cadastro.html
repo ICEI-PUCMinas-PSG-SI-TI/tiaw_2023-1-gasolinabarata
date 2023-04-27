@@ -23,7 +23,7 @@
                 <div class="row d_flex">
                     <div style="text-align: center;" class=" col-md-12 col-sm-12">
                         <div class="logo">
-                            <a>Gas Low Cost&nbsp;</a><img style="width: 50px; margin-bottom: 20px"
+                            <a>Gas Low Cost&nbsp;</a><img style="width: 50px; margin: 15px 0 15px 0;"
                                 src="images/bomba-de-gasolina.png" alt="">
                         </div>
                     </div>
@@ -50,8 +50,8 @@
                             </div>
                             <div class="col-md-12">
                                 <div style="text-align: center;">
-                                    <input class="form_control col-md-4" type="text" name="Nome" id="nome"
-                                        placeholder="Insira seu nome">
+                                    <input class="form_control col-md-4" type="text" name="Nome" id="email"
+                                        placeholder="Insira seu E-mail">
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -70,7 +70,9 @@
                                 <p><a href="#">Termos e condições</p>
                             </div>
                             <div class="col-md-12" style="text-align: center; margin-top: 10px;">
-                                <button type="button" onclick="location.href='Login.html'" class="send_btn">Registra-se</button>
+                                <button type="button"
+                                    onclick="cadastro($('#nome').val(),$('#email').val(),$('#password').val(),$('#confirmarSenha').val())"
+                                    class="send_btn">Registra-se</button>
                             </div>
                             <div class="col-md-12" style="text-align: center; margin-top: 10px;">
                                 <p><a href="Login.html">Já tem uma conta?</p>
@@ -109,6 +111,7 @@
     </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

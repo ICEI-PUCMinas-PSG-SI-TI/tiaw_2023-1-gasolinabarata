@@ -23,7 +23,7 @@
                 <div class="row d_flex">
                     <div style="text-align: center;" class=" col-md-12 col-sm-12">
                         <div class="logo">
-                            <a>Gas Low Cost&nbsp;</a><img style="width: 50px; margin-bottom: 20px"
+                            <a>Gas Low Cost&nbsp;</a><img style="width: 50px; margin: 15px 0 15px 0;"
                                 src="images/bomba-de-gasolina.png" alt="">
                         </div>
                     </div>
@@ -44,18 +44,19 @@
                         <div class="row" style="display: block;">
                             <div class="col-md-12">
                                 <div style="text-align: center;">
-                                    <input class="form_control col-md-4" type="email" name="E-mail" id="e-mail"
+                                    <input class="form_control col-md-4" type="email" name="E-mail" id="email"
                                         placeholder="Email@exemplo.com">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div style="text-align: center;">
-                                    <input class="form_control col-md-4" id="password" type="password" name="Senha"
+                                    <input class="form_control col-md-4" type="password" name="Senha" id="password"
                                         placeholder="Senha">
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <button type="button" onclick="location.href='Index.html'" class="send_btn">Entrar</button>
+                                <button type="button" onclick="login($('#email').val(),$('#password').val())"
+                                    class="send_btn">Entrar</button>
                             </div>
                             <div class="col-md-12" style="text-align: center; margin-top: 10px;">
                                 <p><a href="#">Esqueci minha senha</p>
@@ -97,6 +98,7 @@
     </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

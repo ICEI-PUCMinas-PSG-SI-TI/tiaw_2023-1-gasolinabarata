@@ -202,8 +202,9 @@ button {
 
 .logo a {
     color: #ffffff !important;
-    font-size: 41px;
+    font-size: 30px;
     font-weight: 600;
+    vertical-align: middle;
 }
 
 .site-navbar {

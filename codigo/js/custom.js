@@ -429,3 +429,69 @@ function montarListaFavoritos() {
     $('#listaFavoritos').append(li);
   }
 }
+
+function calcularValorCombustivel(precoAlcool, precoGasolina) {
+  var resultado = Math.round(precoAlcool) / Math.round(precoGasolina);
+  if (resultado < 0.7) {
+    $('#alcoolVantagem').css('display', 'block');
+    $('#gasolinaVantagem').css('display', 'none');
+  }
+  else {
+    $('#gasolinaVantagem').css('display', 'block');
+    $('#alcoolVantagem').css('display', 'none');
+  }
+  return
+}
+
+let listaUsuarios = [
+  {
+    nome: "Admin",
+    email: "admin@gmail.com",
+    senha: "123"
+  }
+]
+
+function cadastro(nomeUser, emailUser, senhaUser, confirmaSenhaUser) {
+  if (senhaUser != confirmaSenhaUser) {
+    return Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Senhas não Conferem!',
+    })
+  } else {
+    var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
+    let usuarioExistente = listaUsersCriados.find(x => x.nome == nomeUser && x.email == emailUser && x.senha == senhaUser)
+
+    if (usuarioExistente != null && usuarioExistente != undefined && usuarioExistente != null) {
+      return Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Usuário já Existe!',
+      })
+    } else {
+      var dados = {
+        "nome": nomeUser,
+        "email": emailUser,
+        "senha": senhaUser
+      }
+      listaUsuarios.push(dados);
+      localStorage.setItem("usersList", JSON.stringify(listaUsuarios));
+      return window.location.href = 'Login.html'
+    }
+  }
+}
+
+function login(emailUser, senhaUser) {
+  var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
+  let usuarioESenhaValidos = listaUsersCriados.find(x => x.email == emailUser && x.senha == senhaUser)
+
+  if (usuarioESenhaValidos != null && usuarioESenhaValidos != undefined && usuarioESenhaValidos != null) {
+    return window.location.href = 'Index.html'
+  } else {
+    return Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Usuário ou senha inválidos!',
+    })
+  }
+}

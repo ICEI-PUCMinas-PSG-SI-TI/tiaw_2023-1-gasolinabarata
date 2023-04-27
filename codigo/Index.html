@@ -21,20 +21,22 @@
       <header class="header-area">
          <div class="container">
             <div class="row d_flex">
-               <div class=" col-md-4 col-sm-4">
+               <div class=" col-md-3 col-sm-3">
                   <div class="logo">
-                     <a href="index.html">Gas Low Cost&nbsp;</a><img style="width: 50px; margin-bottom: 20px"
+                     <a href="index.html">Gas Low Cost&nbsp;</a><img style="width: 50px; margin: 15px 0 15px 0;"
                         src="images/bomba-de-gasolina.png" alt="">
                   </div>
                </div>
-               <div class="col-md-8 col-sm-8">
+               <div class="col-md-9 col-sm-9">
                   <div class="navbar-area">
                      <nav class="site-navbar">
                         <ul>
                            <li><a class="active" href="Index.html">Home</a></li>
                            <li><a href="Favoritos.html">Favoritos</a></li>
+                           <li><a href="Calculadora.html">Calculadora</a></li>
                            <li><a href="Sobre.html">Sobre</a></li>
                            <li><a href="Contato.html">Contate-nos</a></li>
+                           <li><a onclick="logout()" href="Login.html">Sair</a></li>
                         </ul>
                         <button class="nav-toggler">
                            <span></span>
@@ -63,8 +65,8 @@
                         name="pesquisa">
                   </div>
                   <div class="col-md-4">
-                     <select required="required" id="selectTipoCombustivel" class="form_control" placeholder="Pesquisar bairro, rua..."
-                        type="text" name="tipoCombustivel">
+                     <select required="required" id="selectTipoCombustivel" class="form_control"
+                        placeholder="Pesquisar bairro, rua..." type="text" name="tipoCombustivel">
                         <option value="">Selecione o tipo de combustível</option>
                         <option value="1">Diesel</option>
                         <option value="2">Etanol</option>
@@ -110,4 +112,5 @@
    <script src="js/jquery.min.js"></script>
    <script src="js/custom.js"></script>
 </body>
+
 </html>

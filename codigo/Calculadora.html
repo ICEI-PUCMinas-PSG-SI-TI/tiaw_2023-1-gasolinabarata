@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Gas Low Cost</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+</head>
+
+<body class="main-layout">
+    <div class="loader_bg">
+        <span class="loader"></span>
+    </div>
+    <div>
+        <header class="header-area">
+            <div class="container">
+                <div class="row d_flex">
+                    <div class=" col-md-3 col-sm-3">
+                        <div class="logo">
+                            <a href="index.html">Gas Low Cost&nbsp;</a><img style="width: 50px; margin: 15px 0 15px 0;"
+                                src="images/bomba-de-gasolina.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div class="navbar-area">
+                            <nav class="site-navbar">
+                                <ul>
+                                    <li><a href="Index.html">Home</a></li>
+                                    <li><a href="Favoritos.html">Favoritos</a></li>
+                                    <li><a class="active" href="Calculadora.html">Calculadora</a></li>
+                                    <li><a href="Sobre.html">Sobre</a></li>
+                                    <li><a href="Contato.html">Contate-nos</a></li>
+                                    <li><a onclick="logout()" href="Login.html">Sair</a></li>
+                                </ul>
+                                <button class="nav-toggler">
+                                    <span></span>
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="appointment">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="titlepage text_align_center">
+                        <h2>Quando vale a pena usar um combustível ou outro?</h2>
+                        <h1> O etanol vale a pena quando custar até 70% do valor da gasolina.</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <form id="request" class="main_form">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input class="form_control" placeholder="Álcool (preço por litro)" step=".01"
+                                    type="number" id="precoAlcool">
+                            </div>
+                            <div class="col-md-1">
+                                <p style="margin-top: 15px; text-align: center;">X</p>
+                            </div>
+                            <div class="col-md-4">
+                                <input class="form_control" placeholder="Gasolina (preço por litro)" step=".01"
+                                    type="number" id="precoGasolina">
+                            </div>
+                            <div class="col-md-3">
+                                <button
+                                    onclick="calcularValorCombustivel($('#precoAlcool').val(),$('#precoGasolina').val())"
+                                    type="button" class="send_btn">Calcular</button>
+                            </div>
+                        </div>
+                        <div class="titlepage text_align_center col-md-12">
+                            <h2 style="margin-top: 15px; text-align: center; display: none;" id="alcoolVantagem">É mais vantajoso abastecer com álcool.</h2>
+                            <h2 style="margin-top: 15px; text-align: center; display: none;" id="gasolinaVantagem">É mais vantajoso abastecer com gasolina.</h2>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="follow text_align_center">
+                            <h3>Siga-nos</h3>
+                            <ul class="social_icon ">
+                                <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <p>© 2023 All Rights Reserved.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.2.6/jquery.inputmask.bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#precoAlcool').inputmask({ mask: "99.9{2}" })
+        $('#precoGasolina').inputmask({ mask: "99.9{2}" })
+    });
+</script>
