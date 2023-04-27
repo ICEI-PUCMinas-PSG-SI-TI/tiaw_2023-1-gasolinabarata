@@ -9,10 +9,10 @@ Sistemas de Informação
 ## Participantes
 
 > Os membros do grupo são: 
-Daniel Ribeiro
-Leonardo Bisco
-Sâmela Carvalho
-Victor Vieira
+> Daniel Ribeiro
+> Leonardo Bisco
+> Sâmela Carvalho
+> Victor Vieira
 
 # Estrutura do Documento
 
