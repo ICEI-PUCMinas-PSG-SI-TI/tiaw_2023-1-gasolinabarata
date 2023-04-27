@@ -106,7 +106,7 @@ A tabela que segue apresenta os requisitos funcionais do projeto.
 # Projeto da Solução
 Técnicas e recursos, incluindo HTML, CSS e JavaScript, Jquery e SweetAlert2 serão usados para implementar essas funcionalidades. A página será organizada usando HTML e seus elementos serão estilizados usando CSS para torná-la esteticamente agradável e fácil de usar. A página será interativa graças ao JavaScript e JQuery, que permite a interação do usuário com os recursos oferecidos e atualizações sem exigir o recarregamento completo da página, SweetAlert2 utilizado para emitir alertas visuais ao usuario.
 
-![image](https://user-images.githubusercontent.com/128705807/234978859-ef42f563-4ef1-4d8e-997c-b6673b42cce2.png)
+![image](https://user-images.githubusercontent.com/128705807/234979472-d0bc3143-c133-40a2-a916-9bea7e16e8be.png)
 
 
 ## Wireframes
