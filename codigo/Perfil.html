@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Gas Low Cost</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+</head>
+
+<body class="main-layout">
+    <div class="loader_bg">
+        <span class="loader"></span>
+    </div>
+    <div>
+        <header class="header-area">
+            <div class="container">
+                <div class="row d_flex">
+                    <div class=" col-md-1 col-sm-1">
+                        <div class="logo">
+                            <a href="index.html"><img style="width: 50px; margin: 15px 0 15px 0;"
+                                    src="images/bomba-de-gasolina.png" href="index.html" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div class="navbar-area">
+                            <nav class="site-navbar">
+                                <ul>
+                                    <li><a class="active" href="Index.html">Home</a></li>
+                                    <li><a href="Favoritos.html">Favoritos</a></li>
+                                    <li><a href="Calculadora.html">Calculadora</a></li>
+                                    <li><a href="Sobre.html">Sobre</a></li>
+                                    <li><a href="Contato.html">Contate-nos</a></li>
+                                    <li><a onclick="logout()" href="Login.html">Sair</a></li>
+                                </ul>
+                                <button class="nav-toggler">
+                                    <span></span>
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class=" col-md-2 col-sm-2">
+                        <div class="logo">
+                            <a href="Perfil.html">&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                    style="width: 50px; margin: 15px 0 15px 0;" src="images/perfil.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="appointment" style="min-height: 1200px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="titlepage text_align_center">
+                        <h2>Meus Dados</h2>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <form id="request" class="main_form">
+                        <div class="row" style="display: block;">
+                            <h1>Dados Login</h1>
+                            <hr>
+                            <div class="col-md-12" style="display: flex;">
+                                <div class="col-md-6">
+                                    <p>Nome</p>
+                                    <input class="form_control col-md-12" type="text" name="Nome" id="nome"
+                                        placeholder="Insira seu nome">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>E-mail</p>
+                                    <input class="form_control readOnly col-md-12" type="text" name="email" id="email"
+                                        placeholder="Insira seu E-mail">
+                                </div>
+                            </div>
+                            <div class="col-md-12" style="display: flex;">
+                                <div class="col-md-6">
+                                    <p>Senha</p>
+                                    <input class="form_control col-md-12" id="password" type="password" name="Senha"
+                                        placeholder="Insira sua senha" required="required">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Confirmação Senha</p>
+                                    <input class="form_control col-md-12" id="confirmarSenha" type="password"
+                                        name="ConfirmarSenha" placeholder="Confirmar senha" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row" style="display: block;">
+                            <h1>Dados Residenciais</h1>
+                            <hr>
+                            <div class="col-md-12" style="display: flex;">
+                                <div class="col-md-6">
+                                    <p>CEP</p>
+                                    <input class="form_control col-md-12" type="text" name="cep" id="cep"
+                                        placeholder="">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Endereço</p>
+                                    <input class="form_control col-md-12" type="text" name="endereco" id="endereco"
+                                        placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-12" style="display: flex;">
+                                <div class="col-md-3">
+                                    <p>N°</p>
+                                    <input class="form_control col-md-12" type="text" name="numero" id="numero"
+                                        placeholder="">
+                                </div>
+                                <div class="col-md-3">
+                                    <p>Bairro</p>
+                                    <input class="form_control col-md-12" type="text" name="bairro" id="bairro"
+                                        placeholder="">
+                                </div>
+                                <div class="col-md-3">
+                                    <p>Cidade</p>
+                                    <input class="form_control col-md-12" type="text" name="cidade" id="cidade"
+                                        placeholder="">
+                                </div>
+                                <div class="col-md-3">
+                                    <p>Estado</p>
+                                    <select required="required" id="estado" class="form_control" type="text"
+                                        name="estado">
+                                        <option value="">Selecione</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                        <option value="DF">Distrito Federal</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-12" style="text-align: center; margin-top: 10px; display: flex;">
+                            <button type="button"
+                                onclick="AtualizarCadastro($('#nome').val(),$('#email').val(),$('#password').val(),$('#confirmarSenha').val())"
+                                class="send_btn">Salvar</button>
+                            <button type="button"
+                                onclick="ExcluirConta($('#nome').val(),$('#email').val())"
+                                class="send_btn">Excluir sua conta</button>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="follow text_align_center">
+                            <h3>Siga-nos</h3>
+                            <ul class="social_icon ">
+                                <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <p>© 2023 All Rights Reserved.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        let = usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || "[]")
+        $("input[name=Nome]").val(usuarioLogado.nome);
+        $("input[name=email]").val(usuarioLogado.email);
+
+        $("input[name=cep]").val(usuarioLogado.CEP);
+        $("input[name=endereco]").val(usuarioLogado.endereco);
+        $("input[name=bairro]").val(usuarioLogado.bairro);
+        $("input[name=cidade]").val(usuarioLogado.cidade);
+        $("select[name=estado]").val(usuarioLogado.uf);
+        $("input[name=numero]").val(usuarioLogado.num);
+
+
+        $("input[name=cep]").blur(function () {
+            var cep = $(this).val().replace(/[^0-9]/, '');
+            if (cep) {
+                var url = 'https://viacep.com.br/ws/' + cep + '/json/';
+                $.ajax({
+                    url: url,
+                    dataType: 'jsonp',
+                    crossDomain: true,
+                    contentType: "application/json",
+                    success: function (json) {
+                        if (json.logradouro) {
+                            $("input[name=endereco]").val(json.logradouro);
+                            $("input[name=bairro]").val(json.bairro);
+                            $("input[name=cidade]").val(json.localidade);
+                            $("select[name=estado]").val(json.uf);
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
