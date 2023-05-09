@@ -442,3 +442,16 @@ ul.social_Photo li a i:hover {
     transition: ease-in all 0.5s;
     background: #fdc001;
 }
+
+.readOnly {
+    padding: 0 25px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 55px;
+    background: #d1d1cd  !important;
+    color: #000000;
+    font-size: 15px;
+    font-weight: normal;
+    border: inherit;
+    border-radius: 10px;
+}
