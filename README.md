@@ -11,12 +11,15 @@ O aplicativo está sendo desenvolvido com o intuito de buscar e filtrar postos d
 * Victor Vieira
 
 ## Sprint 1 (15 pontos)
-### Documentação
-- Folha de detalhamento do problema ❌
-- Persona(s) ❌
-- Histórias de usuários prioritárias (pelo menos 3) ❌
-- Wireframes apresentados no vídeo. ❌
+### Documentação (revisada em 07/05)
+- Folha de detalhamento do problema ✔️
+- Persona(s) ✔️
+- Histórias de usuários prioritárias (pelo menos 3) ✔️
+- Wireframes apresentados no vídeo. ✔️
 
+__*OBS*__: 
+- no modelo havia como colocar as figuras dentro do relatório, não links para as imagens. Façam isso, por favor, tanto para as personas como para os wireframes.
+- persona 2 e persona 3 estão a mesma (Gustavo Rezende)
 ### Observações sobre a apresentação 
 A apresentação ficou confusa ao apresentar o nome do grupo/produto somente no final. Entendemos que o 'suspense' pode gerar alguma expectativa, porém isso funciona melhor com algo que já criou esta expectativa no público. Ainda assim, poderia ter sido revelado no meio da apresentação para se reforçar como produto. Sentimos falta de histórias de usuários mais bem definidas. Por fim, evitem fazer apresentação lendo o conteúdo do slide. O slide é um apoio visual, não pode ser o conteúdo da explicação.
 
