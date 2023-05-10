@@ -21,10 +21,11 @@
       <header class="header-area">
          <div class="container">
             <div class="row d_flex">
-               <div class=" col-md-3 col-sm-3">
+               <div class=" col-md-1 col-sm-1">
                   <div class="logo">
-                     <a href="Index.html">Gas Low Cost&nbsp;</a><img style="width: 50px; margin: 15px 0 15px 0;"
-                        src="images/bomba-de-gasolina.png" alt="">
+                     <a href="Index.html"><img style="width: 50px; margin: 15px 0 15px 0;"
+                           src="images/bomba-de-gasolina.png" href="Index.html" alt="">
+                     </a>
                   </div>
                </div>
                <div class="col-md-9 col-sm-9">
@@ -44,13 +45,25 @@
                      </nav>
                   </div>
                </div>
+               <div class=" col-md-2 col-sm-2">
+                  <div class="logo">
+                     <a href="Perfil.html">&nbsp;&nbsp;&nbsp;&nbsp;<img style="width: 50px; margin: 15px 0 15px 0;"
+                           src="images/perfil.png" alt="">
+                     </a>
+                  </div>
+               </div>
             </div>
          </div>
       </header>
    </div>
-   <div class="appointment">
+   <div class="appointment" style="min-height: 2500px;">
       <div class="container">
          <div class="row">
+            <div class="col-md-12">
+               <div class="titlepage text_align_center">
+                  <h2 id="nomeBemVindo"></h2>
+               </div>
+            </div>
             <div class="col-md-12">
                <div class="titlepage text_align_center">
                   <h2>Seu posto ideal bem perto de você </h2>
@@ -114,3 +127,8 @@
 </body>
 
 </html>
+
+<script>
+   let = usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || "[]")
+   $('#nomeBemVindo').text(`Bem Vindo ${usuarioLogado.nome}!`)
+</script>
