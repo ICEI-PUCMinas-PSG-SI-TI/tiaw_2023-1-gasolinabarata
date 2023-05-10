@@ -112,11 +112,11 @@ Técnicas e recursos, incluindo HTML, CSS e JavaScript, Jquery e SweetAlert2 ser
 ## Wireframes
 
 Wireframes estão como imagem no seguinte link [https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/tree/comentarios/docs/relatorio/images]
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/assets/128705807/f428aea1-d23f-494e-a060-cbdc942fcfa3)
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/assets/128705807/97857620-b839-4775-88ce-b22193cfd17a)
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/assets/128705807/b26f4132-0e17-4aec-bf57-e81442419354)
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/assets/128705807/1a581993-b320-4bf3-a43b-bce426359f8d)
 
-https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/blob/comentarios/docs/relatorio/images/Mockup1.jpg
-https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/blob/comentarios/docs/relatorio/images/Mockup2.jpg
-https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/blob/comentarios/docs/relatorio/images/Mockup3.jpg
-https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/blob/comentarios/docs/relatorio/images/Mockup4.jpg
 
 ## Mapa de navegação
 
