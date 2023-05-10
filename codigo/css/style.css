@@ -335,10 +335,11 @@ button {
     color: #000000 !important;
     font-size: 15px;
     font-weight: normal;
-    padding: 30px 25px 15px 25px;
+    padding: 20px 25px 15px 25px;
     border: inherit;
-    height: 89px;
-    border-radius: 40px;
+    height: 200px;
+    border-radius: 10px;
+    resize: none;
 }
 
 .main_form .send_btn {
@@ -454,4 +455,61 @@ ul.social_Photo li a i:hover {
     font-weight: normal;
     border: inherit;
     border-radius: 10px;
+}
+
+/* Register */
+
+.resister {
+    text-align: center;
+}
+
+.Remembe {
+    display: flex;
+    padding: 10px 0 20px 0;
+    justify-content: center;
+}
+
+input.Checkbox {
+    margin: 0 10px;
+    width: 20px;
+}
+
+/* Barra de rolagem pagina toda */
+
+/* Fundo que corre */
+.main-layout::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+/* Fundo que corre */
+.main-layout::-webkit-scrollbar {
+    width: 13px;
+    background: none;
+}
+
+/* Linha que desce */
+.main-layout::-webkit-scrollbar-thumb {
+    background: #2d2d2d;
+    border-radius: 0;
+}
+
+/* Barra de rolagem do main_form*/
+
+/* Fundo que corre */
+.main_form .textarea::-webkit-scrollbar-track {
+    background-color: none;
+    border-radius: 20px;
+}
+
+/* Fundo que corre */
+.main_form .textarea::-webkit-scrollbar {
+    width: 13px;
+    background: none;
+    border-radius: 20px;
+}
+
+/* Linha que desce */
+.main_form .textarea::-webkit-scrollbar-thumb {
+    background: #2d2d2d;
+    border-radius: 20px;
 }
