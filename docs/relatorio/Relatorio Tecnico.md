@@ -64,10 +64,9 @@ Técnicas e recursos, incluindo HTML, CSS e JavaScript, serão usados para imple
 ## Personas
 
 As personas estão como imagem no seguinte link https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/tree/comentarios/docs/relatorio/images
-
-https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/blob/comentarios/docs/relatorio/images/Persona1.jpg
-https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/blob/comentarios/docs/relatorio/images/Persona2.jpg
-https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/blob/comentarios/docs/relatorio/images/Persona3.jpg
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/assets/128705807/eceddf81-ec5a-45e7-a230-7e2c78c0f45c)
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/assets/128705807/de93965d-f41b-4d91-b990-e204ad64483d)
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw_2023-1-gasolinabarata/assets/128705807/0bacfe93-1842-4e14-b2b5-1af08a90e496)
 
 ## Histórias de Usuários
 
