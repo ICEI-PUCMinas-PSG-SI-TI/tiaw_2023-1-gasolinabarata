@@ -4,7 +4,6 @@ O aplicativo está sendo desenvolvido com o intuito de buscar e filtrar postos d
 
 ## Alunos integrantes da equipe
 
-* Amanda Agatha
 * Daniel Ribeiro
 * Leonardo Bisco
 * Sâmela Carvalho
