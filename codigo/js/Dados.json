@@ -1,0 +1,11 @@
+{
+    "nome": "Admin",
+    "email": "admin@gmail.com",
+    "senha": "123",
+    "CEP": "31015120",
+    "endereco": "Rua Buenópolis",
+    "num": 12,
+    "bairro": "Santa Tereza",
+    "cidade": "Belo Horizonte",
+    "uf": "MG"
+  }

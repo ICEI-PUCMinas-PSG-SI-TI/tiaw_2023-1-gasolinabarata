@@ -478,6 +478,13 @@ input.Checkbox {
     width: 20px;
 }
 
+.span-required {
+    color: #e63636;
+    font-size: 15px;
+    margin: 0 0 5px 10px;
+    display: none;
+}
+
 /* Barra de rolagem pagina toda */
 
 /* Fundo que corre */

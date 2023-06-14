@@ -457,8 +457,123 @@ let listaUsuarios = [
   }
 ]
 
-function cadastro(nomeUser, emailUser, senhaUser, confirmaSenhaUser) {
-  if (senhaUser != confirmaSenhaUser) {
+/*
+Cadastro
+*/
+
+const form = document.getElementById('request');
+const campos = document.querySelectorAll('.required');
+const spans = document.querySelectorAll('.span-required');
+const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/i;
+
+form.addEventListener('click', (event) => {
+  event.preventDefault();
+  nameValidate();
+  emailValidate();
+  mainpasswordValidate();
+  comparePassword();
+
+  /*
+  if(campos[2].value == campos[3].value || campos[3].value.length >= 6) {
+    var dados = {
+      "nome": nameValidate,
+      "email": emailValidate,
+      "senha": mainpasswordValidate,
+      "CEP": $("input[name=cep]").val(),
+      "endereco": $("input[name=endereco]").val(),
+      "num": $("input[name=numero]").val(),
+      "bairro": $("input[name=bairro]").val(),
+      "cidade": $("input[name=cidade]").val(),
+      "uf": $("select[name=estado]").val(),
+    }
+    listaUsuarios.push(dados);
+      localStorage.setItem("usersList", JSON.stringify(listaUsuarios));
+      return window.location.href = 'Login.html'
+  }
+
+
+  if (campos[2].value == campos[3].value && campos[3].value.length >= 6) {
+    var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
+    let usuarioExistente = listaUsersCriados.find(x => x.nome == nameValidate && x.email == emailValidate)
+
+    if (usuarioExistente != null && usuarioExistente != undefined && usuarioExistente != null) {
+      return Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Campo(s) obrigatório(s) não preenchido(s)!',
+      })
+    } else {
+      var dados = {
+        "nome": nameValidate,
+        "email": emailValidate,
+        "senha": mainpasswordValidate,
+        "CEP": $("input[name=cep]").val(),
+        "endereco": $("input[name=endereco]").val(),
+        "num": $("input[name=numero]").val(),
+        "bairro": $("input[name=bairro]").val(),
+        "cidade": $("input[name=cidade]").val(),
+        "uf": $("select[name=estado]").val(),
+      }
+      listaUsuarios.push(dados);
+      localStorage.setItem("usersList", JSON.stringify(listaUsuarios));
+      return window.location.href = 'Login.html'
+    }
+  }
+  */
+
+
+});
+
+function setError(index) {
+  campos[index].style.border = '2px solid #e63636';
+  campos[index].style.outline = 'none';
+  spans[index].style.display = 'block';
+}
+
+function removeError(index) {
+  campos[index].style.border = '';
+  campos[index].style.outline = '';
+  spans[index].style.display = 'none';
+}
+
+function nameValidate() {
+  if (campos[0].value.length < 3) {
+    setError(0);
+  } else {
+    removeError(0);
+  }
+}
+
+function emailValidate() {
+  if (!emailRegex.test(campos[1].value)) {
+    setError(1);
+  } else {
+    removeError(1);
+  }
+}
+
+function mainpasswordValidate() {
+  if (campos[2].value.length < 6) {
+    setError(2);
+  } else {
+    removeError(2);
+    comparePassword();
+  }
+}
+
+function comparePassword() {
+  if (campos[2].value == campos[3].value && campos[3].value.length >= 6) {
+    removeError(3);
+  } else {
+    setError(3);
+  }
+}
+
+
+
+/*
+function cadastro(nameValidate, emailValidate, mainpasswordValidate, confirmamainpasswordValidate) {
+  if (mainpasswordValidate != confirmamainpasswordValidate) {
     return Swal.fire({
       icon: 'error',
       title: 'Oops...',
@@ -466,19 +581,19 @@ function cadastro(nomeUser, emailUser, senhaUser, confirmaSenhaUser) {
     })
   } else {
     var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
-    let usuarioExistente = listaUsersCriados.find(x => x.nome == nomeUser && x.email == emailUser)
+    let usuarioExistente = listaUsersCriados.find(x => x.nome == nameValidate && x.email == emailValidate)
 
     if (usuarioExistente != null && usuarioExistente != undefined && usuarioExistente != null) {
       return Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Usuário já Existe!',
+        text: 'Campo(s) obrigatório(s) não preenchido(s)!',
       })
     } else {
       var dados = {
-        "nome": nomeUser,
-        "email": emailUser,
-        "senha": senhaUser,
+        "nome": nameValidate,
+        "email": emailValidate,
+        "senha": mainpasswordValidate,
         "CEP": $("input[name=cep]").val(),
         "endereco": $("input[name=endereco]").val(),
         "num": $("input[name=numero]").val(),
@@ -493,9 +608,14 @@ function cadastro(nomeUser, emailUser, senhaUser, confirmaSenhaUser) {
   }
 }
 
-function login(emailUser, senhaUser) {
+
+/*
+Login
+*/
+
+function login(emailValidate, mainpasswordValidate) {
   var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
-  let usuarioESenhaValidos = listaUsersCriados.find(x => x.email == emailUser && x.senha == senhaUser)
+  let usuarioESenhaValidos = listaUsersCriados.find(x => x.email == emailValidate && x.senha == mainpasswordValidate)
 
   if (usuarioESenhaValidos != null && usuarioESenhaValidos != undefined && usuarioESenhaValidos != null) {
     localStorage.setItem("usuarioLogado", JSON.stringify(usuarioESenhaValidos));
@@ -509,13 +629,13 @@ function login(emailUser, senhaUser) {
   }
 }
 
-function AtualizarCadastro(nomeUser, emailUser, senhaUser, confirmaSenhaUser) {
-  if (senhaUser == null &&
-    senhaUser == undefined &&
-    senhaUser == "" &&
-    confirmaSenhaUser == null &&
-    confirmaSenhaUser == undefined &&
-    confirmaSenhaUser == "") {
+function AtualizarCadastro(nameValidate, emailValidate, mainpasswordValidate, confirmamainpasswordValidate) {
+  if (mainpasswordValidate == null &&
+    mainpasswordValidate == undefined &&
+    mainpasswordValidate == "" &&
+    confirmamainpasswordValidate == null &&
+    confirmamainpasswordValidate == undefined &&
+    confirmamainpasswordValidate == "") {
     return Swal.fire({
       icon: 'error',
       title: 'Oops...',
@@ -523,7 +643,7 @@ function AtualizarCadastro(nomeUser, emailUser, senhaUser, confirmaSenhaUser) {
     })
   }
 
-  if (senhaUser != confirmaSenhaUser) {
+  if (mainpasswordValidate != confirmamainpasswordValidate) {
     return Swal.fire({
       icon: 'error',
       title: 'Oops...',
@@ -531,14 +651,14 @@ function AtualizarCadastro(nomeUser, emailUser, senhaUser, confirmaSenhaUser) {
     })
   } else {
     var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
-    let usuarioExistente = listaUsersCriados.find(x => x.email == emailUser)
+    let usuarioExistente = listaUsersCriados.find(x => x.email == emailValidate)
 
     if (usuarioExistente != null && usuarioExistente != undefined && usuarioExistente != null) {
 
       var dados = {
-        "nome": nomeUser,
-        "email": emailUser,
-        "senha": senhaUser,
+        "nome": nameValidate,
+        "email": emailValidate,
+        "senha": mainpasswordValidate,
         "CEP": $("input[name=cep]").val(),
         "endereco": $("input[name=endereco]").val(),
         "num": $("input[name=numero]").val(),
@@ -559,7 +679,7 @@ function AtualizarCadastro(nomeUser, emailUser, senhaUser, confirmaSenhaUser) {
   }
 }
 
-function ExcluirConta(nomeUser, emailUser) {
+function ExcluirConta(nameValidate, emailValidate) {
   Swal.fire({
     title: 'Tem certeza que deseja excluir sua conta?',
     showDenyButton: true,
@@ -570,7 +690,7 @@ function ExcluirConta(nomeUser, emailUser) {
     if (result.isConfirmed) {
       var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
       var usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || "[]");
-      let usuarioExistente = listaUsersCriados.find(x => x.email == emailUser && x.nome == nomeUser)
+      let usuarioExistente = listaUsersCriados.find(x => x.email == emailValidate && x.nome == nameValidate)
 
       if (usuarioExistente != null && usuarioExistente != undefined && usuarioExistente != null) {
         for (let i = 0; i < listaUsersCriados.length; i++) {
