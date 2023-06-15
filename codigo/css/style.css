@@ -245,6 +245,14 @@ button {
     text-transform: uppercase;
 }
 
+.site-navbar ul li  {
+    color: #ffffff;
+    font-size: 17px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 .site-navbar ul li {
     padding-right: 70px;
 }

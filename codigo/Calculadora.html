@@ -37,7 +37,7 @@
                                     <li><a class="active" href="Calculadora.html">Calculadora</a></li>
                                     <li><a href="Sobre.html">Sobre</a></li>
                                     <li><a href="Contato.html">Contate-nos</a></li>
-                                    <li><a onclick="logout()" href="Login.html">Sair</a></li>
+                                    <li><a onclick="logout()">Sair</a></li>
                                 </ul>
                                 <button class="nav-toggler">
                                     <span></span>
@@ -131,5 +131,6 @@
     $(document).ready(function () {
         $('#precoAlcool').inputmask({ mask: "99.9{2}" })
         $('#precoGasolina').inputmask({ mask: "99.9{2}" })
+        PossuiUsuarioLogado()
     });
 </script>

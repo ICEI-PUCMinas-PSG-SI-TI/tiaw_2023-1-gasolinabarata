@@ -37,7 +37,7 @@
                                     <li><a href="Calculadora.html">Calculadora</a></li>
                                     <li><a href="Sobre.html">Sobre</a></li>
                                     <li><a href="Contato.html">Contate-nos</a></li>
-                                    <li><a onclick="logout()" href="Login.html">Sair</a></li>
+                                    <li><a onclick="logout()">Sair</a></li>
                                 </ul>
                                 <button class="nav-toggler">
                                     <span></span>
@@ -167,8 +167,7 @@
                             <button type="button"
                                 onclick="AtualizarCadastro($('#nome').val(),$('#email').val(),$('#password').val(),$('#confirmarSenha').val())"
                                 class="send_btn">Salvar</button>
-                            <button type="button"
-                                onclick="ExcluirConta($('#nome').val(),$('#email').val())"
+                            <button type="button" onclick="ExcluirConta($('#nome').val(),$('#email').val())"
                                 class="send_btn">Excluir sua conta</button>
                         </div>
                 </div>
@@ -213,6 +212,8 @@
 
 <script>
     $(document).ready(function () {
+        PossuiUsuarioLogado()
+
         let = usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || "[]")
         $("input[name=Nome]").val(usuarioLogado.nome);
         $("input[name=email]").val(usuarioLogado.email);
