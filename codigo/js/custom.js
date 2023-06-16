@@ -720,3 +720,7 @@ function PossuiUsuarioLogado() {
     window.location.href = "Login.html";
   }
 }
+
+function voltar() {
+  window.location.href = "pagina.html";
+}
