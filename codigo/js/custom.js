@@ -586,7 +586,7 @@ function logout() {
 
 function PossuiUsuarioLogado() {
   var usuario = JSON.parse(localStorage.getItem("usuarioLogado") || "[]");
-  if (usuario == 'Vazio') {
+  if (usuario == 'Vazio' || usuario != null || usuario != '' || usuario != undefined) {
     window.location.href = "Login.html";
   }
 }
