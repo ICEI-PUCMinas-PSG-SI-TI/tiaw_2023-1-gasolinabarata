@@ -443,20 +443,6 @@ function calcularValorCombustivel(precoAlcool, precoGasolina) {
   return
 }
 
-let listaUsuarios = [
-  {
-    nome: "admin",
-    email: "admin@gmail.com",
-    senha: "1",
-    CEP: "31015120",
-    endereco: "Rua Buenópolis",
-    num: 12,
-    bairro: "Santa Tereza",
-    cidade: "Belo Horizonte",
-    uf: "MG",
-  }
-]
-
 function IniciarUsuarios() {
   var dados = {
     "nome": "admin",
@@ -586,7 +572,7 @@ function logout() {
 
 function PossuiUsuarioLogado() {
   var usuario = JSON.parse(localStorage.getItem("usuarioLogado") || "[]");
-  if (usuario == 'Vazio' || usuario != null || usuario != '' || usuario != undefined) {
+  if (usuario == 'Vazio' || usuario == null || usuario == '' || usuario == undefined) {
     window.location.href = "Login.html";
   }
 }
