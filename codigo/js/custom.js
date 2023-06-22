@@ -354,7 +354,7 @@ function buscarPostos(tipoCombSelecionado) {
 }
 
 function parametroValido(params) {
-  if (params != null && params != '' && params != undefined) {
+  if (params != null && params != "" && params != undefined) {
     return true;
   }
   return false;
@@ -443,7 +443,6 @@ function calcularValorCombustivel(precoAlcool, precoGasolina) {
   return
 }
 
-
 let listaUsuarios = [
   {
     nome: "admin",
@@ -458,229 +457,101 @@ let listaUsuarios = [
   }
 ]
 
-/*
-Cadastro
-*/
-
-const form = document.getElementById('request');
-const campos = document.querySelectorAll('.required');
-const spans = document.querySelectorAll('.span-required');
-const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/i;
-
-form.addEventListener('click', (event) => {
-  event.preventDefault();
-  nameValidate();
-  emailValidate();
-  mainpasswordValidate();
-  comparePassword();
-
-  /*
-  if(campos[2].value == campos[3].value || campos[3].value.length >= 6) {
-    var dados = {
-      "nome": nameValidate,
-      "email": emailValidate,
-      "senha": mainpasswordValidate,
-      "CEP": $("input[name=cep]").val(),
-      "endereco": $("input[name=endereco]").val(),
-      "num": $("input[name=numero]").val(),
-      "bairro": $("input[name=bairro]").val(),
-      "cidade": $("input[name=cidade]").val(),
-      "uf": $("select[name=estado]").val(),
-    }
-    listaUsuarios.push(dados);
-      localStorage.setItem("usersList", JSON.stringify(listaUsuarios));
-      return window.location.href = 'Login.html'
+function IniciarUsuarios() {
+  var dados = {
+    "nome": "admin",
+    "email": "admin@gmail.com",
+    "senha": "123",
+    "CEP": "31015120",
+    "endereco": "Rua Buenópolis",
+    "num": 12,
+    "bairro": "Santa Tereza",
+    "cidade": "Belo Horizonte",
+    "uf": "MG"
   }
 
-
-  if (campos[2].value == campos[3].value && campos[3].value.length >= 6) {
-    var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
-    let usuarioExistente = listaUsersCriados.find(x => x.nome == nameValidate && x.email == emailValidate)
-
-    if (usuarioExistente != null && usuarioExistente != undefined && usuarioExistente != null) {
-      return Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Campo(s) obrigatório(s) não preenchido(s)!',
-      })
-    } else {
-      var dados = {
-        "nome": nameValidate,
-        "email": emailValidate,
-        "senha": mainpasswordValidate,
-        "CEP": $("input[name=cep]").val(),
-        "endereco": $("input[name=endereco]").val(),
-        "num": $("input[name=numero]").val(),
-        "bairro": $("input[name=bairro]").val(),
-        "cidade": $("input[name=cidade]").val(),
-        "uf": $("select[name=estado]").val(),
-      }
-      listaUsuarios.push(dados);
-      localStorage.setItem("usersList", JSON.stringify(listaUsuarios));
-      return window.location.href = 'Login.html'
-    }
-  }
-  */
-
-
-});
-
-function setError(index) {
-  campos[index].style.border = '2px solid #e63636';
-  campos[index].style.outline = 'none';
-  spans[index].style.display = 'block';
-}
-
-function removeError(index) {
-  campos[index].style.border = '';
-  campos[index].style.outline = '';
-  spans[index].style.display = 'none';
-}
-
-function nameValidate() {
-  if (campos[0].value.length < 3) {
-    setError(0);
-  } else {
-    removeError(0);
-  }
-}
-
-function emailValidate() {
-  if (!emailRegex.test(campos[1].value)) {
-    setError(1);
-  } else {
-    removeError(1);
-  }
-}
-
-function mainpasswordValidate() {
-  if (campos[2].value.length < 6) {
-    setError(2);
-  } else {
-    removeError(2);
-    comparePassword();
-  }
-}
-
-function comparePassword() {
-  if (campos[2].value == campos[3].value && campos[3].value.length >= 6) {
-    removeError(3);
-  } else {
-    setError(3);
-  }
-}
-
-
-
-/*
-function cadastro(nameValidate, emailValidate, mainpasswordValidate, confirmamainpasswordValidate) {
-  if (mainpasswordValidate != confirmamainpasswordValidate) {
-    return Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Senhas não Conferem!',
-    })
-  } else {
-    var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
-    let usuarioExistente = listaUsersCriados.find(x => x.nome == nameValidate && x.email == emailValidate)
-
-    if (usuarioExistente != null && usuarioExistente != undefined && usuarioExistente != null) {
-      return Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Campo(s) obrigatório(s) não preenchido(s)!',
-      })
-    } else {
-      var dados = {
-        "nome": nameValidate,
-        "email": emailValidate,
-        "senha": mainpasswordValidate,
-        "CEP": $("input[name=cep]").val(),
-        "endereco": $("input[name=endereco]").val(),
-        "num": $("input[name=numero]").val(),
-        "bairro": $("input[name=bairro]").val(),
-        "cidade": $("input[name=cidade]").val(),
-        "uf": $("select[name=estado]").val(),
-      }
-      listaUsuarios.push(dados);
-      localStorage.setItem("usersList", JSON.stringify(listaUsuarios));
-      return window.location.href = 'Login.html'
-    }
-  }
-}
-
-
-/*
-Login
-*/
-
-function login(emailValidate, mainpasswordValidate) {
   var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
-  let usuarioESenhaValidos = listaUsersCriados.find(x => x.email == emailValidate && x.senha == mainpasswordValidate)
+  let usuarioExistente = listaUsersCriados.find(x => x.email == "admin@gmail.com")
 
-  if (usuarioESenhaValidos != null && usuarioESenhaValidos != undefined && usuarioESenhaValidos != null) {
-    localStorage.setItem("usuarioLogado", JSON.stringify(usuarioESenhaValidos));
-    return window.location.href = 'Index.html'
+  if (usuarioExistente == null || usuarioExistente == undefined || usuarioExistente == "") {
+    listaUsersCriados.push(dados);
+    localStorage.setItem("usersList", JSON.stringify(listaUsersCriados));
+  }
+}
+
+function login(email, senha) {
+  if (loginValido(email, senha)) {
+    var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
+    let usuarioESenhaValidos = listaUsersCriados.find(x => x.email == email && x.senha == senha)
+
+    if (usuarioESenhaValidos != null && usuarioESenhaValidos != undefined && usuarioESenhaValidos != "") {
+      localStorage.setItem("usuarioLogado", JSON.stringify(usuarioESenhaValidos));
+      return window.location.href = 'Index.html'
+    } else {
+      return Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Usuário ou senha inválidos!',
+      })
+    }
   } else {
     return Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'Usuário ou senha inválidos!',
+      text: 'Preencha os dados de Usuário e Senha',
     })
   }
 }
 
-function AtualizarCadastro(nameValidate, emailValidate, mainpasswordValidate, confirmamainpasswordValidate) {
-  if (mainpasswordValidate == null &&
-    mainpasswordValidate == undefined &&
-    mainpasswordValidate == "" &&
-    confirmamainpasswordValidate == null &&
-    confirmamainpasswordValidate == undefined &&
-    confirmamainpasswordValidate == "") {
+function loginValido(email, senha) {
+  if (email != '' && email != undefined && email != null && senha != '' && senha != undefined && senha != null) {
+    return true
+  }
+  return false
+}
+
+function AtualizarCadastro(nome, email, senha, confirmaSenha) {
+  var dados = {
+    "nome": nome,
+    "email": email,
+    "senha": senha,
+    "CEP": $("input[name=cep]").val(),
+    "endereco": $("input[name=endereco]").val(),
+    "num": $("input[name=numero]").val(),
+    "bairro": $("input[name=bairro]").val(),
+    "cidade": $("input[name=cidade]").val(),
+    "uf": $("select[name=estado]").val(),
+  }
+
+  if (!validarCamposCadastro(dados)) {
     return Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'Senha e Confirmação de senha não podem ser vazios!',
+      text: 'Campo(s) obrigatório(s) não preenchido(s)!',
     })
   }
 
-  if (mainpasswordValidate != confirmamainpasswordValidate) {
+  if (senha != confirmaSenha) {
     return Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'Senhas não Conferem!',
+      text: 'Campo(s) Senha e Confirmação estão diferentes',
     })
-  } else {
-    var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
-    let usuarioExistente = listaUsersCriados.find(x => x.email == emailValidate)
+  }
 
-    if (usuarioExistente != null && usuarioExistente != undefined && usuarioExistente != null) {
-
-      var dados = {
-        "nome": nameValidate,
-        "email": emailValidate,
-        "senha": mainpasswordValidate,
-        "CEP": $("input[name=cep]").val(),
-        "endereco": $("input[name=endereco]").val(),
-        "num": $("input[name=numero]").val(),
-        "bairro": $("input[name=bairro]").val(),
-        "cidade": $("input[name=cidade]").val(),
-        "uf": $("select[name=estado]").val(),
-      }
-
-      for (let i = 0; i < listaUsersCriados.length; i++) {
-        if (listaUsersCriados[i].email == dados.email) {
-          listaUsersCriados.splice(i, 1);
-        }
-      }
-      listaUsersCriados.push(dados);
-      localStorage.setItem("usersList", JSON.stringify(listaUsersCriados));
-      return window.location.href = 'Perfil.html'
+  var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
+  for (let i = 0; i < listaUsersCriados.length; i++) {
+    if (listaUsersCriados[i].email == dados.email) {
+      listaUsersCriados.splice(i, 1);
     }
   }
+  listaUsersCriados.push(dados);
+  localStorage.setItem("usuarioLogado", JSON.stringify(dados));
+  localStorage.setItem("usersList", JSON.stringify(listaUsersCriados));
+  return window.location.href = 'Perfil.html'
 }
 
-function ExcluirConta(nameValidate, emailValidate) {
+function ExcluirConta(nome, email) {
   Swal.fire({
     title: 'Tem certeza que deseja excluir sua conta?',
     showDenyButton: true,
@@ -691,9 +562,9 @@ function ExcluirConta(nameValidate, emailValidate) {
     if (result.isConfirmed) {
       var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
       var usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || "[]");
-      let usuarioExistente = listaUsersCriados.find(x => x.email == emailValidate && x.nome == nameValidate)
+      let usuarioExistente = listaUsersCriados.find(x => x.email == email)
 
-      if (usuarioExistente != null && usuarioExistente != undefined && usuarioExistente != null) {
+      if (usuarioExistente != null && usuarioExistente != undefined && usuarioExistente != "") {
         for (let i = 0; i < listaUsersCriados.length; i++) {
           if (listaUsersCriados[i].email == usuarioLogado.email && listaUsersCriados[i].nome == usuarioLogado.nome) {
             listaUsersCriados.splice(i, 1);
@@ -715,12 +586,71 @@ function logout() {
 
 function PossuiUsuarioLogado() {
   var usuario = JSON.parse(localStorage.getItem("usuarioLogado") || "[]");
-  console.log(usuario)
   if (usuario == 'Vazio') {
     window.location.href = "Login.html";
   }
 }
 
 function voltar() {
-  window.location.href = "pagina.html";
+  window.location.href = "Pagina.html";
+}
+
+function cadastro(nomeUser, emailUser, senhaUser, confirmaSenhaUser) {
+  var dados = {
+    "nome": nomeUser,
+    "email": emailUser,
+    "senha": senhaUser,
+    "CEP": $("input[name=cep]").val(),
+    "endereco": $("input[name=endereco]").val(),
+    "num": $("input[name=numero]").val(),
+    "bairro": $("input[name=bairro]").val(),
+    "cidade": $("input[name=cidade]").val(),
+    "uf": $("select[name=estado]").val(),
+  }
+  if (!validarCamposCadastro(dados)) {
+    return Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Campo(s) obrigatório(s) não preenchido(s)!',
+    })
+  }
+
+  if (senhaUser != confirmaSenhaUser) {
+    return Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Campo(s) Senha e Confirmação estão diferentes',
+    })
+  }
+
+  var listaUsersCriados = JSON.parse(localStorage.getItem("usersList") || "[]");
+  let usuarioExistente = listaUsersCriados.find(x => x.email == emailUser)
+
+  if (usuarioExistente != null && usuarioExistente != undefined && usuarioExistente != "") {
+    return Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Usuário já existe!',
+    })
+  } else {
+    listaUsersCriados.push(dados);
+    localStorage.setItem("usersList", JSON.stringify(listaUsersCriados));
+    return window.location.href = 'Login.html'
+  }
+}
+
+function validarCamposCadastro(params) {
+  if (parametroValido(params.nome) &&
+    parametroValido(params.email) &&
+    parametroValido(params.senha) &&
+    parametroValido(params.CEP) &&
+    parametroValido(params.endereco) &&
+    parametroValido(params.num) &&
+    parametroValido(params.bairro) &&
+    parametroValido(params.cidade) &&
+    parametroValido(params.uf)) {
+    return true
+  } else {
+    return false
+  }
 }

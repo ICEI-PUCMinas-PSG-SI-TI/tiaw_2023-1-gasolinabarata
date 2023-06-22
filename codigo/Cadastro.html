@@ -31,7 +31,7 @@
             </div>
         </header>
     </div>
-    
+
     <div class="appointment">
         <div class="container">
             <div class="row">
@@ -50,14 +50,14 @@
                                 <div class="col-md-6">
                                     <p>Nome</p>
                                     <input class="form_control col-md-12 required" type="text" name="Nome" id="nome"
-                                        placeholder="Insira seu nome" oninput="nameValidate()">
+                                        placeholder="Insira seu nome">
                                     <span class="span-required">Nome dever ter no mínimo 3 caracteres</span>
                                 </div>
 
                                 <div class="col-md-6">
                                     <p>E-mail</p>
                                     <input class="form_control col-md-12 required" type="text" name="email" id="email"
-                                        placeholder="Insira seu E-mail" oninput="emailValidate()">
+                                        placeholder="Insira seu E-mail">
                                     <span class="span-required">Digite um Email válido</span>
                                 </div>
                             </div>
@@ -66,13 +66,13 @@
                                 <div class="col-md-6">
                                     <p>Senha</p>
                                     <input class="form_control col-md-12 required" id="password" type="password"
-                                        name="Senha" placeholder="Insira sua senha" oninput="mainpasswordValidate()">
+                                        name="Senha" placeholder="Insira sua senha">
                                     <span class="span-required">Digite uma senha com no mínimo 6 caracteres</span>
                                 </div>
                                 <div class="col-md-6">
                                     <p>Confirmação Senha</p>
                                     <input class="form_control col-md-12 required" id="confirmarSenha" type="password"
-                                        name="ConfirmarSenha" placeholder="Confirmar senha" oninput="comparePassword()">
+                                        name="ConfirmarSenha" placeholder="Confirmar senha">
                                     <span class="span-required">Senhas devem ser comparivel</span>
                                 </div>
                             </div>
@@ -112,8 +112,7 @@
 
                                 <div class="col-md-3">
                                     <p>Estado</p>
-                                    <select  id="estado" class="form_control" type="text"
-                                        name="estado">
+                                    <select id="estado" class="form_control" type="text" name="estado">
                                         <option value="">Selecione</option>
                                         <option value="AC">Acre</option>
                                         <option value="AL">Alagoas</option>
@@ -151,15 +150,14 @@
                         <div class="col-md-12" style="text-align: center; margin-top: 10px;">
                             <p><a href="#">Termos e condições</p>
                         </div>
-                        
+
                         <div class="col-md-12" style="text-align: center; margin-top: 10px;">
                             <button type="button"
-                               /*onclick="cadastro($('#nome').val(),$('#email').val(),$('#password').val(),$('#confirmarSenha').val())"*/
-                                 class="send_btn">Registra-se</button>
+                                onclick="cadastro($('#nome').val(),$('#email').val(),$('#password').val(),$('#confirmarSenha').val())"
+                                class="send_btn">Registra-se</button>
                         </div>
                         <div class="col-md-12" style="text-align: center; margin-top: 10px;">
-                            <button type="button" onclick="voltar()"
-                            class="send_btn">voltar</button>
+                            <button type="button" onclick="voltar()" class="send_btn">voltar</button>
                         </div>
                         <div class="col-md-12" style="text-align: center; margin-top: 10px;">
                             <p><a href="Login.html">Já tem uma conta?</p>
